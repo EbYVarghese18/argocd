@@ -10,7 +10,7 @@ namespace:
   name: myappnamespace
 
 service:
-  name: myapp-service
+  name: myapp-service 
   type: NodePort
   port: 80
   targetPort: 80
