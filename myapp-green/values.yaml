@@ -1,0 +1,25 @@
+image:
+  repository: ebinvarghese/myapp-nginx:2.0  #docker image from dockerhub
+  tag: 2.0
+
+replicaCount: 2
+
+appName: myapp-green
+
+namespace: 
+  name: myappnamespace
+
+service:
+  name: myapp-service
+  type: NodePort
+  port: 80
+  targetPort: 80
+
+deploymentName: myapp-deployment
+
+ingressName: myapp-ingress
+
+ingress:
+  enabled: true
+  host: myapp.local
+  pathType: Prefix
